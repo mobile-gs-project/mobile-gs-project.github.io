@@ -234,8 +234,60 @@
   </div>
 </section>
 
+<hr>
+
+</section class="section">
+  <div class="container is-max-desktop">
+        <h2 class="title is-3">Rendering Pipeline</h2>
+
+      <img src="static/images/method.png" alt="">
+<p>
+
+    In the inference stage, different from 3DGS, our proposed method eliminates the tile-based rendering and the 3D Gaussian sorting process typically required for accurate alpha blending. 
+    Instead, we render all 3D Gaussians associated with a target pixel in a single pass. 
+    To further improve performance and maintain visual quality, we propose a depth-aware order-independent rendering strategy that replaces the original sorting-dependent alpha blending.
+</p>
+
+  </div>
+</section>
 
 
+<hr>
+
+</section class="section">
+  <div class="container is-max-desktop">
+        <h2 class="title is-3">High-valued Opacity</h2>
+
+      <img src="static/images/opacity.png" alt="">
+<p>
+
+Left: We leverage an MLP fed with 3D Gaussian scale, rotation, spherical harmonics, and the vector of the camera toward the 3D Gaussian as input to predict a view-dependent opacity.
+    Right:  We display that our Mobile-GS removes redundant opacity and keeps important Gaussians with high opacity.
+</p>
+
+  </div>
+</section>
+
+<hr>
+
+</section class="section">
+  <div class="container is-max-desktop">
+        <h2 class="title is-3">Runtime Analysis</h2>
+
+      <img src="static/images/runtime.png" alt="">
+<p>
+
+We further provide a detailed runtime analysis of our proposed Mobile-GS evaluated on four representative scenes, covering both indoor and 
+outdoor environments from the Mip-NeRF 360 dataset. The reported runtime accounts for all essential components involved in the rendering pipeline, 
+including the lightweight MLPs used for view-dependent effects.
+ Despite the inclusion of MLPs, which are often regarded as computationally demanding, our design introduces minimal overhead.
+  This demonstrates that Mobile-GS maintains a favorable balance between computational efficiency and model expressiveness, 
+  ensuring real-time performance without compromising visual fidelity.
+
+</p>
+
+  </div>
+</section>
 
 <hr>
 
